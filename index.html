@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Khushwant Singh — Social Media Manager, Content Strategist & Short-Form Video Specialist. Building viral brands with 3.8M+ reach." />
+  <meta name="keywords" content="Social Media Manager, Content Strategist, Instagram Growth, Reel Editor, Brand Builder, Delhi" />
+  <title>Khushwant Singh — Social Media Manager & Content Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">KS</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <div class="preloader-text">Initialising Portfolio<span class="dot-anim">...</span></div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KS<span class="logo-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-blob blob-3"></div>
+      <canvas id="particles-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for Freelance &amp; Full-Time
+      </div>
+      <h1 class="hero-title reveal-up">
+        <span class="title-line">I Build Viral</span>
+        <span class="title-line gradient-text">Content &amp;</span>
+        <span class="title-line">Creator Brands</span>
+      </h1>
+      <p class="hero-sub reveal-up">
+        Social Media Manager · Content Strategist · Reel Editor · Brand Builder
+      </p>
+      <div class="hero-ctas reveal-up">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span>Hire Me</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="hero-stat"><span class="hs-num">3.8M+</span><span class="hs-label">Total Reach</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hs-num">1.9M+</span><span class="hs-label">Best Reel</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hs-num">4900+</span><span class="hs-label">Followers Managed</span></div>
+      </div>
+    </div>
+    <div class="hero-float-cards">
+      <div class="float-card fc-1 reveal-right">
+        <div class="fc-icon">▶</div>
+        <div class="fc-info">
+          <div class="fc-views">1.9M views</div>
+          <div class="fc-label">Fitness Reel</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:95%"></div></div>
+        </div>
+      </div>
+      <div class="float-card fc-2 reveal-right">
+        <div class="fc-icon">📈</div>
+        <div class="fc-info">
+          <div class="fc-views">+847 followers</div>
+          <div class="fc-label">This Month</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:72%"></div></div>
+        </div>
+      </div>
+      <div class="float-card fc-3 reveal-right">
+        <div class="fc-icon">🔥</div>
+        <div class="fc-info">
+          <div class="fc-views">Trending</div>
+          <div class="fc-label">3 Viral Reels</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:88%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Turning Scroll-Stops Into Viral Moments</h2>
+          <p class="about-body">
+            I'm <strong>Khushwant Singh</strong> — a Social Media Manager and Content Strategist based in Delhi, India. I specialise in building creator brands from the ground up, crafting scroll-stopping content that performs on Instagram's algorithm.
+          </p>
+          <p class="about-body">
+            My work speaks in numbers: <strong>1.9M+, 1.3M+, and 600K+ organic views</strong> on individual Reels — built through a deep understanding of audience psychology, trend research, and hook-driven storytelling. I've managed the full content pipeline for fitness and lifestyle creator brands as a one-person powerhouse.
+          </p>
+          <p class="about-body">
+            Beyond content, I bring a technical edge — from post-production in <strong>Adobe Premiere Pro, After Effects, and CapCut</strong>, to designing with <strong>Canva and Photoshop</strong>, to building digital experiences with <strong>HTML, CSS, and JS</strong>.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Audience Psychology</span>
+            <span class="tag">Trend Research</span>
+            <span class="tag">Short-Form Storytelling</span>
+            <span class="tag">AI Workflows</span>
+            <span class="tag">Brand Identity</span>
+            <span class="tag">Frontend Dev</span>
+          </div>
+          <div class="about-ctas">
+            <a href="#contact" class="btn btn-primary"><span>Let's Work Together</span></a>
+            <a href="mailto:khushwant.1two3@gmail.com" class="btn btn-ghost"><span>Get in Touch</span></a>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="about-card-stack">
+            <div class="abt-card abt-card-main">
+              <div class="abt-avatar">KS</div>
+              <div class="abt-name">Khushwant Singh</div>
+              <div class="abt-role">Social Media Manager</div>
+              <div class="abt-location">📍 Delhi, India</div>
+              <div class="abt-metrics">
+                <div class="abt-metric"><span>3.8M+</span>Reach</div>
+                <div class="abt-metric"><span>4900+</span>Followers</div>
+                <div class="abt-metric"><span>2+</span>Years</div>
+              </div>
+            </div>
+            <div class="abt-card abt-card-tools">
+              <div class="tools-label">Arsenal</div>
+              <div class="tools-grid">
+                <div class="tool-pill">Premiere Pro</div>
+                <div class="tool-pill">After Effects</div>
+                <div class="tool-pill">CapCut</div>
+                <div class="tool-pill">Canva</div>
+                <div class="tool-pill">Photoshop</div>
+                <div class="tool-pill">ChatGPT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section id="stats" class="section stats-section">
+    <div class="stats-bg-line"></div>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal-up" data-delay="0">
+          <div class="stat-glow"></div>
+          <div class="stat-number" data-target="3800000" data-suffix="M+" data-scale="1000000" data-prefix="">3.8</div>
+          <div class="stat-label">Total Organic Reach</div>
+          <div class="stat-sub">Across all content</div>
+        </div>
+        <div class="stat-card reveal-up" data-delay="100">
+          <div class="stat-glow"></div>
+          <div class="stat-number" data-target="1900000" data-suffix="M+" data-scale="1000000" data-prefix="">1.9</div>
+          <div class="stat-label">Best Reel Views</div>
+          <div class="stat-sub">Single viral post</div>
+        </div>
+        <div class="stat-card reveal-up" data-delay="200">
+          <div class="stat-glow"></div>
+          <div class="stat-number" data-target="4900" data-suffix="+" data-scale="1" data-prefix="">4900</div>
+          <div class="stat-label">Followers Managed</div>
+          <div class="stat-sub">Active community</div>
+        </div>
+        <div class="stat-card reveal-up" data-delay="300">
+          <div class="stat-glow"></div>
+          <div class="stat-number" data-target="3" data-suffix="+" data-scale="1" data-prefix="">3</div>
+          <div class="stat-label">Viral Campaigns</div>
+          <div class="stat-sub">1M+ each</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p class="section-desc">A full-stack creator toolkit — from strategy and scripting to post-production and analytics.</p>
+      </div>
+      <div class="skills-categories">
+        <div class="skills-cat reveal-up" data-delay="0">
+          <div class="skills-cat-label">Strategy</div>
+          <div class="skills-list">
+            <div class="skill-item"><div class="skill-icon">📊</div><span>Social Media Strategy</span></div>
+            <div class="skill-item"><div class="skill-icon">📈</div><span>Instagram Growth</span></div>
+            <div class="skill-item"><div class="skill-icon">📅</div><span>Content Planning</span></div>
+            <div class="skill-item"><div class="skill-icon">🧠</div><span>Audience Psychology</span></div>
+            <div class="skill-item"><div class="skill-icon">🎯</div><span>Brand Storytelling</span></div>
+            <div class="skill-item"><div class="skill-icon">🤝</div><span>Influencer Marketing</span></div>
+          </div>
+        </div>
+        <div class="skills-cat reveal-up" data-delay="100">
+          <div class="skills-cat-label">Production</div>
+          <div class="skills-list">
+            <div class="skill-item"><div class="skill-icon">🎬</div><span>Reel Editing</span></div>
+            <div class="skill-item"><div class="skill-icon">🎞️</div><span>Adobe Premiere Pro</span></div>
+            <div class="skill-item"><div class="skill-icon">✨</div><span>After Effects</span></div>
+            <div class="skill-item"><div class="skill-icon">📱</div><span>CapCut</span></div>
+            <div class="skill-item"><div class="skill-icon">🎨</div><span>Canva</span></div>
+            <div class="skill-item"><div class="skill-icon">🖼️</div><span>Photoshop</span></div>
+          </div>
+        </div>
+        <div class="skills-cat reveal-up" data-delay="200">
+          <div class="skills-cat-label">Tech &amp; AI</div>
+          <div class="skills-list">
+            <div class="skill-item"><div class="skill-icon">🤖</div><span>ChatGPT &amp; AI Workflows</span></div>
+            <div class="skill-item"><div class="skill-icon">💻</div><span>HTML / CSS / JS</span></div>
+            <div class="skill-item"><div class="skill-icon">🐍</div><span>Python (Basics)</span></div>
+            <div class="skill-item"><div class="skill-icon">📊</div><span>Meta Business Suite</span></div>
+            <div class="skill-item"><div class="skill-icon">🔍</div><span>Trend Research</span></div>
+            <div class="skill-item"><div class="skill-icon">📉</div><span>Performance Analytics</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Campaigns &amp; Projects</h2>
+        <p class="section-desc">Real work. Real results. Built from the ground up.</p>
+      </div>
+      <div class="projects-grid">
+
+        <a class="project-link" href="https://www.instagram.com/reel/DF5YPNtvxlR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" aria-label="Open Fitness & Lifestyle Instagram Campaign project">
+          <div class="project-card reveal-up" data-delay="0">
+            <div class="project-img project-img-1">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span>Instagram</span><span>Reels</span><span>Growth</span>
+                </div>
+              </div>
+              <div class="project-mockup">
+                <div class="mock-phone">
+                  <div class="mock-screen">
+                    <div class="mock-reel">
+                      <div class="mock-play">▶</div>
+                      <div class="mock-views">1.9M views</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">01</div>
+              <h3 class="project-title">Fitness &amp; Lifestyle Instagram Campaign</h3>
+              <p class="project-desc">End-to-end content strategy and production for a fitness creator brand — from ideation, scripting, and editing to publishing and performance tracking.</p>
+              <div class="project-meta">
+                <div class="pm-item"><span class="pm-label">Role</span><span>Solo SMM + Editor</span></div>
+                <div class="pm-item"><span class="pm-label">Result</span><span>3.8M+ cumulative reach</span></div>
+              </div>
+              <div class="project-results">
+                <div class="pr-badge">1.9M views</div>
+                <div class="pr-badge">1.3M views</div>
+                <div class="pr-badge">600K+ views</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-link" href="https://www.instagram.com/reel/DYROOX3hnjh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" aria-label="Open NIELIT O Level Learning & Exam Prep Platform project">
+          <div class="project-card reveal-up" data-delay="100">
+            <div class="project-img project-img-2">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span>NIELIT Branding</span><span>Student Engagement</span><span>Educational Content</span>
+                </div>
+              </div>
+              <div class="project-mockup">
+                <div class="mock-browser">
+                  <div class="mock-bar">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mock-content mock-edu">
+                    <div class="mock-edu-icon">📘</div>
+                    <div class="mock-edu-title">NIELIT O Level</div>
+                    <div class="mock-edu-copy">Learning &amp; Exam Prep</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">02</div>
+              <h3 class="project-title">NIELIT O Level Learning &amp; Exam Prep Platform</h3>
+              <p class="project-desc">Designed and managed a student-focused digital learning project for NIELIT O Level preparation — including educational content strategy, UI planning, student engagement ideas, and promotional creatives aimed at simplifying technical learning for beginners.</p>
+              <div class="project-meta">
+                <div class="pm-item"><span class="pm-label">Role</span><span>Content + Campaign Manager</span></div>
+                <div class="pm-item"><span class="pm-label">Year</span><span>2025</span></div>
+              </div>
+              <div class="project-results">
+                <div class="pr-badge">Exam Prep Strategy</div>
+                <div class="pr-badge">Student Engagement</div>
+                <div class="pr-badge">Promotional Creatives</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-link" href="https://www.instagram.com/reel/DPVR90bidfJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" aria-label="Open Creator Branding Projects project">
+          <div class="project-card reveal-up" data-delay="200">
+            <div class="project-img project-img-3">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span>Branding</span><span>Creator</span><span>Identity</span>
+                </div>
+              </div>
+              <div class="project-mockup">
+                <div class="mock-brand">
+                  <div class="mock-brand-circle"></div>
+                  <div class="mock-brand-bars">
+                    <div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">03</div>
+              <h3 class="project-title">Creator Branding Projects</h3>
+              <p class="project-desc">Built cohesive creator brand identities across content verticals — defining visual language, content pillars, tone of voice, and posting strategy for sustained growth.</p>
+              <div class="project-meta">
+                <div class="pm-item"><span class="pm-label">Role</span><span>Brand Strategist</span></div>
+                <div class="pm-item"><span class="pm-label">Focus</span><span>Identity + Growth</span></div>
+              </div>
+              <div class="project-results">
+                <div class="pr-badge">Visual Identity</div>
+                <div class="pr-badge">Content Strategy</div>
+                <div class="pr-badge">Community Growth</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-link" href="https://khushwant-debug.github.io/client-portfolio-/" target="_blank" rel="noopener" aria-label="Open Portfolio & Showcase Websites project">
+          <div class="project-card reveal-up" data-delay="300">
+            <div class="project-img project-img-4">
+              <div class="project-overlay">
+                <div class="project-tags">
+                  <span>Web Dev</span><span>Portfolio</span><span>Design</span>
+                </div>
+              </div>
+              <div class="project-mockup">
+                <div class="mock-browser">
+                  <div class="mock-bar">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mock-content mock-code">
+                    <div class="mock-code-line" style="width:60%"></div>
+                    <div class="mock-code-line" style="width:80%"></div>
+                    <div class="mock-code-line" style="width:45%"></div>
+                    <div class="mock-code-line" style="width:70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-number">04</div>
+              <h3 class="project-title">Portfolio &amp; Showcase Websites</h3>
+              <p class="project-desc">Cinematic, high-impact digital brand experiences — built with HTML, CSS, and JS — featuring immersive animations, transitions, and storytelling-first design.</p>
+              <div class="project-meta">
+                <div class="pm-item"><span class="pm-label">Role</span><span>Designer + Developer</span></div>
+                <div class="pm-item"><span class="pm-label">Stack</span><span>HTML · CSS · JS</span></div>
+              </div>
+              <div class="project-results">
+                <div class="pr-badge">Cinematic UI</div>
+                <div class="pr-badge">Animations</div>
+                <div class="pr-badge">Brand Storytelling</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Journey</div>
+        <h2 class="section-title">Experience &amp; Timeline</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-up" data-delay="0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 — Present</div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-role">Social Media Manager &amp; Content Creator</div>
+              <div class="tc-company">@tushaaryg · Instagram · Freelance</div>
+            </div>
+            <p class="tc-desc">Solely managing all Instagram content strategy, production, and publishing for a fitness &amp; lifestyle creator — functioning as a one-person social media team on a 4,900+ follower account.</p>
+            <ul class="tc-highlights">
+              <li>Produced Reels with 1.9M, 1.3M, and 600K+ organic views</li>
+              <li>Full-funnel content strategy — pillars, cadence, visual identity, targeting</li>
+              <li>End-to-end post-production in Premiere Pro, After Effects, CapCut</li>
+              <li>Performance analytics and trend-driven content optimisation</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Instagram Strategy</span><span>Reel Editing</span><span>Analytics</span><span>Brand Building</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" data-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026</div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-role">Event Coordinator</div>
+              <div class="tc-company">NIELIT — National Institute of Electronics &amp; IT</div>
+            </div>
+            <p class="tc-desc">Managed end-to-end coordination of the Swachhata Pakhwada public campaign — overseeing presentations, audience engagement, and live event communications.</p>
+            <ul class="tc-highlights">
+              <li>Oversaw presentations and live event communications</li>
+              <li>Developed real-time adaptability and stage presence</li>
+              <li>Public communication skills applicable to brand activations</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Event Management</span><span>Public Communication</span><span>Brand Activation</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-up" data-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 — 2025</div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-role">Freelance Creator Branding &amp; Web Projects</div>
+              <div class="tc-company">Independent · Delhi, India</div>
+            </div>
+            <p class="tc-desc">Built high-impact digital brand experiences and creator branding projects — spanning AI-powered web apps, portfolio sites, and campaign landing pages with cinematic UI design.</p>
+            <ul class="tc-highlights">
+              <li>AI Meeting Analyser — product brand and launch campaign</li>
+              <li>Portfolio and product showcase websites</li>
+              <li>Creator brand identity and content strategy consulting</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Web Development</span><span>Brand Strategy</span><span>Campaign Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">Social Proof</div>
+        <h2 class="section-title">What Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal-up" data-delay="0">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">Khushwant completely transformed our Instagram presence. Within two months, our reels were hitting numbers we'd never seen before. The strategy is sharp, the editing is cinematic, and the results speak for themselves.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">TG</div>
+            <div class="testi-info">
+              <div class="testi-name">Tushaar G.</div>
+              <div class="testi-role">Fitness &amp; Lifestyle Creator · Delhi</div>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-card reveal-up" data-delay="150">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">He understood our product deeply and turned it into a brand story that resonated with our audience instantly. The AI Analyser launch campaign was professional, creative, and far beyond what we expected.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RS</div>
+            <div class="testi-info">
+              <div class="testi-name">Ravi S.</div>
+              <div class="testi-role">Tech Startup Founder · Bangalore</div>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-card reveal-up" data-delay="300">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">The portfolio website Khushwant built for us was unlike anything we'd seen — cinematic, smooth, and on-brand. It dramatically improved our first impression with new clients. Highly recommend his work.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AM</div>
+            <div class="testi-info">
+              <div class="testi-name">Anika M.</div>
+              <div class="testi-role">Creative Director · Mumbai</div>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">What I Offer</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-desc">Everything you need to build, grow, and dominate on social media.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="service-icon-wrap"><span>📱</span></div>
+          <h3>Instagram Management</h3>
+          <p>Full account management — strategy, content calendar, publishing, and growth.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="50">
+          <div class="service-icon-wrap"><span>🎬</span></div>
+          <h3>Reel Editing</h3>
+          <p>Cinematic short-form video editing built for virality — hooks, pacing, and platform optimisation.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="service-icon-wrap"><span>🗺️</span></div>
+          <h3>Content Strategy</h3>
+          <p>Data-informed content planning — pillars, cadence, audience targeting, and performance tracking.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="150">
+          <div class="service-icon-wrap"><span>🏷️</span></div>
+          <h3>Brand Positioning</h3>
+          <p>Define your voice, aesthetic, and market position to cut through the noise.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="200">
+          <div class="service-icon-wrap"><span>🌟</span></div>
+          <h3>Creator Branding</h3>
+          <p>Building complete creator identities — from visual language to content pillars and monetisation strategy.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="250">
+          <div class="service-icon-wrap"><span>⚡</span></div>
+          <h3>Short-Form Video</h3>
+          <p>High-converting short-form content for Instagram Reels, YouTube Shorts, and TikTok.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="300">
+          <div class="service-icon-wrap"><span>📊</span></div>
+          <h3>Social Media Growth</h3>
+          <p>Organic growth strategy using trend research, algorithm understanding, and engagement optimisation.</p>
+        </div>
+        <div class="service-card reveal-up" data-delay="350">
+          <div class="service-icon-wrap"><span>💻</span></div>
+          <h3>Portfolio &amp; Web</h3>
+          <p>Cinematic portfolio sites and brand microsites built with HTML, CSS, and JS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Let's Build Something<br /><span class="gradient-text">Extraordinary</span></h2>
+          <p class="contact-desc">Whether you need a viral content strategy, a full Instagram rebrand, or just want to discuss your brand vision — I'm here. Let's talk.</p>
+          <div class="contact-details">
+            <a href="mailto:khushwant.1two3@gmail.com" class="cd-item">
+              <div class="cd-icon">✉</div>
+              <div class="cd-text">
+                <span class="cd-label">Email</span>
+                <span>khushwant.1two3@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/__khushwant___/" target="_blank" class="cd-item">
+              <div class="cd-icon">📸</div>
+              <div class="cd-text">
+                <span class="cd-label">Instagram</span>
+                <span>@khushwant</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/khushwant-singh-dev/" target="_blank" class="cd-item">
+              <div class="cd-icon">in</div>
+              <div class="cd-text">
+                <span class="cd-label">LinkedIn</span>
+                <span>Khushwant </span>
+              </div>
+            </a>
+            <div class="cd-item">
+              <div class="cd-icon">📍</div>
+              <div class="cd-text">
+                <span class="cd-label">Location</span>
+                <span>Delhi, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <form class="contact-form glass-card" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="project">Project Type</label>
+              <select id="project" name="project">
+                <option value="">Select a service...</option>
+                <option>Instagram Management</option>
+                <option>Reel Editing</option>
+                <option>Content Strategy</option>
+                <option>Brand Positioning</option>
+                <option>Creator Branding</option>
+                <option>Portfolio / Web</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, goals, and timeline..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-success" id="form-success">
+              <span>✓</span> Message sent! I'll get back to you within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">KS<span class="logo-dot">.</span></div>
+          <p>Social Media Manager · Content Strategist · Brand Builder</p>
+          <p class="footer-loc">📍 Delhi, India</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="mailto:khushwant.1two3@gmail.com" class="social-icon" title="Email">✉</a>
+          <a href="https://www.instagram.com/__khushwant___/" target="_blank" class="social-icon" title="Instagram">📸</a>
+          <a href="https://www.linkedin.com/in/khushwant-singh-dev/" target="_blank" class="social-icon" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Khushwant Singh. All rights reserved.</span>
+        <span>Built with precision &amp; passion.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
