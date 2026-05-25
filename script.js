@@ -26,35 +26,7 @@ function initScrollProgress() {
 }
 initScrollProgress();
 
-/* ── CUSTOM CURSOR ── */
-(function initCursor() {
-  const cursor = document.getElementById('cursor');
-  const follower = document.getElementById('cursor-follower');
-  if (!cursor || !follower) return;
-
-  let mx = -100, my = -100, fx = -100, fy = -100;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top = my + 'px';
-  });
-
-  function animFollower() {
-    fx += (mx - fx) * 0.12;
-    fy += (my - fy) * 0.12;
-    follower.style.left = fx + 'px';
-    follower.style.top = fy + 'px';
-    requestAnimationFrame(animFollower);
-  }
-  animFollower();
-
-  document.querySelectorAll('a, button, .skill-item, .project-card, .service-card, .testi-card, .stat-card, .timeline-card').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-})();
+/* ── CUSTOM CURSOR REMOVED FOR PERFORMANCE ── */
 
 /* ── NAVBAR ── */
 (function initNavbar() {
@@ -166,75 +138,7 @@ function initReveal() {
   observer.observe(statsSection);
 })();
 
-/* ── PARTICLES CANVAS ── */
-(function initParticles() {
-  const canvas = document.getElementById('particles-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
-  const particles = [];
-  const count = window.innerWidth < 768 ? 40 : 80;
-
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.4;
-      this.speedY = (Math.random() - 0.5) * 0.4;
-      this.opacity = Math.random() * 0.4 + 0.1;
-      this.color = Math.random() > 0.5 ? '61,122,255' : '124,92,252';
-    }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
-      ctx.fill();
-    }
-  }
-
-  for (let i = 0; i < count; i++) particles.push(new Particle());
-
-  function drawConnections() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          const alpha = (1 - dist / 120) * 0.08;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(61,122,255,${alpha})`;
-          ctx.lineWidth = 0.5;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    drawConnections();
-    requestAnimationFrame(animate);
-  }
-  animate();
-})();
+/* ── PARTICLES CANVAS REMOVED FOR PERFORMANCE ── */
 
 /* ── SMOOTH SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -301,13 +205,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 (function initTilt() {
   if (window.innerWidth < 768) return;
   document.querySelectorAll('.project-card, .testi-card, .stat-card').forEach(card => {
+    let ticking = false;
     card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) / (rect.width / 2);
-      const dy = (e.clientY - cy) / (rect.height / 2);
-      card.style.transform = `perspective(600px) rotateY(${dx * 4}deg) rotateX(${-dy * 4}deg) translateY(-6px)`;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const rect = card.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) / (rect.width / 2);
+          const dy = (e.clientY - cy) / (rect.height / 2);
+          card.style.transform = `perspective(600px) rotateY(${dx * 4}deg) rotateX(${-dy * 4}deg) translate3d(0, -6px, 0)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
     });
     card.addEventListener('mouseleave', () => {
       card.style.transform = '';
@@ -338,12 +249,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* ── SCROLL-TRIGGERED BACKGROUND SHIFT ── */
 (function initBgParallax() {
   const blobs = document.querySelectorAll('.hero-blob');
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    blobs.forEach((blob, i) => {
-      const speed = 0.04 + i * 0.02;
-      blob.style.transform = `translateY(${y * speed}px)`;
-    });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const y = window.scrollY;
+        blobs.forEach((blob, i) => {
+          const speed = 0.04 + i * 0.02;
+          blob.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 })();
 
@@ -352,15 +270,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const hero = document.getElementById('hero');
   if (!hero || window.innerWidth < 1024) return;
 
+  let ticking = false;
   document.addEventListener('mousemove', e => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 10;
-    const floatCards = document.querySelectorAll('.float-card');
-    floatCards.forEach((card, i) => {
-      const factor = 0.5 + i * 0.3;
-      card.style.transform = `translate(${-x * factor}px, ${-y * factor}px)`;
-    });
-  });
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 20;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        const floatCards = document.querySelectorAll('.float-card');
+        floatCards.forEach((card, i) => {
+          const factor = 0.5 + i * 0.3;
+          card.style.transform = `translate3d(${-x * factor}px, ${-y * factor}px, 0)`;
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 })();
 
 /* ── PRELOADER body overflow ── */
