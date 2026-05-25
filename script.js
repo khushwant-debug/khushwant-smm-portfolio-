@@ -76,7 +76,7 @@ initScrollProgress();
 
 /* ── SCROLL REVEAL ── */
 function initReveal() {
-  const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+  const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-line');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

@@ -343,6 +343,27 @@ img { max-width: 100%; display: block; }
   opacity: 1; transform: none;
 }
 
+/* ── SECTION SEPARATOR ── */
+.section-separator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34,34,59,0.3), transparent);
+  box-shadow: 0 0 15px rgba(34,34,59,0.15);
+}
+.reveal-line {
+  opacity: 0;
+  width: 0;
+  transition: opacity 1s ease, width 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-line.visible {
+  opacity: 1;
+  width: calc(100% - 64px);
+  max-width: 1136px;
+}
+
 /* ==============================
    HERO SECTION
    ============================== */
@@ -1236,7 +1257,7 @@ img { max-width: 100%; display: block; }
   .hero-content { padding-left: 32px; padding-right: 32px; }
   .hero-scroll-hint { left: 32px; }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) {  .reveal-line.visible { width: calc(100% - 40px); }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .section { padding: 80px 0; }
